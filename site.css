@@ -23,9 +23,10 @@ button{color:inherit}
 .brand strong,.brand small{display:block}
 .brand strong{font-weight:750;letter-spacing:.02em}
 .brand small{font-size:.73rem;color:var(--muted)}
-nav{display:flex;align-items:center;gap:clamp(14px,3vw,36px);font-size:.9rem;font-weight:650}
+nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:0 clamp(12px,2vw,26px);font-size:.9rem;font-weight:650}
 nav a{padding-block:10px;white-space:nowrap}
-nav a:last-child{color:var(--accent)}
+nav a[href$="#publicacoes"],.nav-private{color:var(--accent)}
+.nav-private{display:inline-flex;align-items:center;gap:5px}
 nav a:hover,footer a:hover{text-decoration:underline;text-underline-offset:4px}
 .hero{position:relative;isolation:isolate;display:grid;background:#122523}
 .hero-image,.hero::after{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
@@ -101,7 +102,7 @@ body:has(dialog[open]){overflow:hidden}
 .close{position:absolute;right:10px;top:10px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:var(--bg);font-size:1.5rem;line-height:1}
 #link-manual{width:100%;border:1px solid var(--line);background:var(--bg);color:var(--text);padding:8px}
 @media(max-width:850px){.hero::after{background:linear-gradient(90deg,#061716ec,#0617164d),linear-gradient(0deg,#061716f0,transparent 55%)}.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){html{scroll-padding-top:7rem}.header-inner{flex-wrap:wrap;justify-content:center;gap:5px;padding:8px 0}.brand .brand-logo{width:clamp(76.8px,24vw,92.8px)}nav{width:100%;justify-content:center;gap:clamp(12px,5vw,28px);font-size:.82rem}.hero-inner{min-height:540px;padding-top:65px}.hero-description{max-width:34ch}.hero-caption{font-size:.68rem}.intro,.section-heading,.project-themes,.card-grid,.reader{grid-template-columns:1fr}.section-heading{gap:14px}.project-themes{margin-top:26px}.search{max-width:none}.footer-inner{align-items:start;flex-direction:column}.reader-media{padding:10px}.reader-media img{max-height:55dvh}.reader-content{padding:24px}.card-media{aspect-ratio:1.48}}
+@media(max-width:600px){html{scroll-padding-top:8rem}.header-inner{flex-wrap:wrap;justify-content:center;gap:5px;padding:8px 0}.brand .brand-logo{width:clamp(76.8px,24vw,92.8px)}nav{width:100%;justify-content:center;gap:0 clamp(10px,3vw,20px);font-size:.82rem}nav a{padding-block:6px}.hero-inner{min-height:540px;padding-top:65px}.hero-description{max-width:34ch}.hero-caption{font-size:.68rem}.intro,.section-heading,.project-themes,.card-grid,.reader{grid-template-columns:1fr}.section-heading{gap:14px}.project-themes{margin-top:26px}.search{max-width:none}.footer-inner{align-items:start;flex-direction:column}.reader-media{padding:10px}.reader-media img{max-height:55dvh}.reader-content{padding:24px}.card-media{aspect-ratio:1.48}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 /* Abertura editorial e Atlas */
 .editorial-line{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:18px;font: .72rem/1.45 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
@@ -166,4 +167,4 @@ body:has(dialog[open]){overflow:hidden}
 .atlas-map .leaflet-control-layers input{accent-color:var(--accent)}
 .atlas-map .leaflet-control-attribution{background:#09191be8;color:var(--text);font-size:10px;line-height:1.4}
 .atlas-map .leaflet-control-attribution a{color:var(--accent)}
-@media(max-width:420px){nav{gap:4px 8px;font-size:.72rem;flex-wrap:wrap}nav a{padding-block:6px}}
+@media(max-width:420px){nav{gap:0 8px;font-size:.72rem}nav a{padding-block:6px}}
