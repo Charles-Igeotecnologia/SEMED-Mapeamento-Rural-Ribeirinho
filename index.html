@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09191b">
+  <title>Mapeamento Rural Ribeirinho | SEMED Manaus</title>
+  <meta name="description" content="Conheça o projeto de mapeamento do transporte escolar rural ribeirinho da SEMED Manaus. Explore expedições, rotas e registros de campo.">
+  <link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="site.css">
+  <script defer src="publicacoes.js"></script>
+  <script defer src="site.js"></script>
+  <script defer src="vendor/leaflet/leaflet.js"></script>
+  <script defer src="atlas.js"></script>
+</head>
+<body id="inicio">
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <!-- Logo da Prefeitura de Manaus e assinatura institucional. -->
+      <a class="brand" href="#inicio"><span class="brand-logo" role="img" aria-label="Prefeitura de Manaus"><img class="brand-crest" src="assets/logo-prefeitura-manaus-horizontal.png" alt="" width="712" height="284"><img class="brand-wordmark" src="assets/logo-prefeitura-manaus-horizontal.png" alt="" width="712" height="284"></span><span><strong>SEMED Manaus</strong><small>DGTI Geotecnologia</small></span></a>
+      <nav aria-label="Navegação principal"><a href="#projeto">O projeto</a><a href="#expedicoes">Expedições</a><a href="#atlas">Atlas</a><a href="relatorio.html">Relatório</a><a href="#publicacoes">Publicações <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo">
+      <img class="hero-image" src="assets/foto-banner-2240.webp" srcset="assets/foto-banner-960.webp 960w, assets/foto-banner-2240.webp 2240w" sizes="100vw" alt="" fetchpriority="high">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="kicker"><span></span> Educação e território <i></i> Manaus, AM</p>
+          <h1 id="titulo">Mapeamento Rural<br><em>Ribeirinho</em></h1>
+          <p class="hero-description">Conheça o levantamento geoespacial do transporte escolar ribeirinho, das expedições fluviais aos caminhos percorridos para chegar à escola.</p>
+          <div class="actions"><a class="button primary" href="#expedicoes">Conhecer as expedições <span aria-hidden="true">↓</span></a><a class="button secondary" href="#publicacoes">Explorar publicações <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="hero-caption"><span>Projeto da Secretaria Municipal de Educação</span><span>Fotografia aérea · Acervo do projeto</span></div>
+      </div>
+    </section>
+
+    <section id="expedicoes" class="section expeditions" aria-labelledby="expedicoes-titulo">
+      <div class="wrap">
+        <div class="editorial-line"><p class="kicker"><span>01</span><i></i> O território em perspectiva</p><span>Em foco</span></div>
+        <div class="focus-layout">
+          <div class="focus-copy">
+            <h2 id="expedicoes-titulo">Expedições <em>fluviais</em></h2>
+            <p>Acompanhe as viagens pelos rios Negro e Amazonas e conheça a rotina de quem mapeou os caminhos até a escola.</p>
+            <a class="editorial-link" href="#post=expedicao-rio-amazonas" data-post="expedicao-rio-amazonas">Ler a publicação em destaque ↗</a>
+            <div class="focus-count"><strong id="total-acervo"></strong><span>publicações no<br>acervo do projeto</span></div>
+          </div>
+          <div class="focus-gallery" id="destaques" aria-label="Publicações em destaque"></div>
+          <aside class="focus-aside" aria-label="Outra leitura em destaque"><p class="kicker">Diário de campo</p><div id="leitura-complementar"></div></aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="projeto" class="section project">
+      <div class="wrap">
+        <p class="kicker"><span>02</span><i></i> O projeto</p>
+        <div class="intro">
+          <h2>Os caminhos<br>até a <em>escola.</em></h2>
+          <div><p>O Mapeamento Rural Ribeirinho é um projeto da Secretaria Municipal de Educação de Manaus, elaborado pela DGTI Geotecnologia. O levantamento reúne registros sobre o transporte escolar nas comunidades ribeirinhas e sobre as condições de acesso às escolas.</p>
+          <p>O acervo acompanha a equipe durante a navegação e as visitas. As publicações mostram os pontos de apoio, os desafios observados no percurso e o trabalho de conferência das informações de campo.</p>
+          <p><a class="editorial-link" href="relatorio.html">Consultar o relatório preliminar ↗</a></p></div>
+        </div>
+        <div class="project-themes">
+          <div><span>01 / PERCURSOS</span><h3>Rotas escolares</h3><p>Navegação, embarques e trechos de acesso às escolas.</p></div>
+          <div><span>02 / EXPEDIÇÕES</span><h3>Trabalho de campo</h3><p>Visitas, registros de viagem e rotina da equipe.</p></div>
+          <div><span>03 / OPERAÇÃO</span><h3>Logística fluvial</h3><p>Embarcações, pontos de apoio e organização dos deslocamentos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="atlas" class="section atlas" aria-labelledby="atlas-titulo">
+      <div class="wrap">
+        <img class="atlas-symbol" src="assets/atlas.svg" alt="" width="52" height="52">
+        <p class="kicker"><span>03</span><i></i> Atlas</p>
+        <div class="section-heading"><h2 id="atlas-titulo">Cada história,<br><em>um lugar.</em></h2><p>Explore os dois rios e encontre as publicações ligadas a cada região. Os marcadores são referências aproximadas: não indicam rotas navegadas, escolas ou pontos coletados em campo.</p></div>
+        <div class="atlas-layout">
+          <div class="atlas-side">
+            <div id="atlas-regioes" class="atlas-regions" role="group" aria-label="Regiões do Atlas"></div>
+            <div class="atlas-reading" id="atlas-leituras"></div>
+          </div>
+          <div class="atlas-map-panel">
+            <div id="atlas-mapa" class="atlas-map" role="region" aria-label="Mapa de referência dos rios Negro e Amazonas"><p class="map-placeholder">Carregando mapa de referência…</p></div>
+            <div class="atlas-caption"><span>◉ Referência regional aproximada</span><button type="button" id="atlas-reset">Visão geral ↺</button></div>
+            <p class="atlas-notice" id="atlas-aviso" role="status" hidden></p>
+          </div>
+        </div>
+        <p class="atlas-source"><a class="editorial-link" href="relatorio.html#mapa-consolidado">Ver a prancha consolidada do levantamento ↗</a></p>
+        <p class="atlas-source"><a href="https://www.manaus.am.gov.br/semed/wp-content/uploads/sites/3/2025/03/Republicacao-do-Edital-PSS-2025.pdf" target="_blank" rel="noopener">Referências territoriais: SEMED Manaus ↗</a></p>
+      </div>
+    </section>
+
+    <section id="publicacoes" class="section publications">
+      <div class="wrap">
+        <p class="kicker"><span>04</span><i></i> Acervo do projeto</p>
+        <div class="section-heading"><h2>Leituras de um<br><em>território vivo.</em></h2><p>Filtre por tema ou busque pelo nome de uma expedição, comunidade ou atividade.</p></div>
+        <div class="feed-bar">
+          <div id="filtros" class="filters" role="group" aria-label="Filtrar por tema"></div>
+          <label class="search"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15 15 5 5"/></svg><span class="visually-hidden">Buscar publicações</span><input type="search" id="busca" placeholder="Buscar no acervo…"></label>
+        </div>
+        <p id="resultados" class="resultados" role="status"></p>
+        <div id="lista" class="card-grid"></div>
+        <details id="mais" class="archive" hidden><summary id="mais-titulo">Ver demais publicações</summary><div id="lista-mais" class="card-grid"></div></details>
+        <noscript><p>Ative o JavaScript para explorar o acervo de publicações.</p></noscript>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><div><strong>Mapeamento Rural Ribeirinho</strong><p>Secretaria Municipal de Educação de Manaus · Elaboração: DGTI Geotecnologia</p></div><a href="#inicio">Voltar ao início ↑</a></div></footer>
+  <dialog id="leitor" aria-labelledby="leitor-titulo">
+    <div class="reader">
+      <button id="fechar" class="close" type="button" aria-label="Fechar publicação" autofocus>×</button>
+      <div class="reader-media"><img id="leitor-imagem" alt=""></div>
+      <div class="reader-content"><p class="kicker" id="leitor-tema"></p><h2 id="leitor-titulo"></h2><p id="leitor-resumo"></p><div class="reader-actions"><a id="ampliar" class="button primary" target="_blank" rel="noopener">Ampliar peça ↗</a><a id="baixar" class="button secondary" download>Baixar imagem ↓</a><button id="copiar" class="button secondary" type="button">Copiar link</button></div><p id="aviso-link" role="status"></p><input id="link-manual" readonly hidden aria-label="Link para copiar"></div>
+    </div>
+  </dialog>
+</body>
+</html>
