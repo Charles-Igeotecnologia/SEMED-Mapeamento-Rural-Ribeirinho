@@ -52,7 +52,7 @@ nav a:hover,footer a:hover{text-decoration:underline;text-underline-offset:4px}
 h1,h2,h3{font-family:var(--display);line-height:1.04;margin:0;text-wrap:balance}
 h1{font-size:clamp(3rem,7.7vw,7.1rem);letter-spacing:-.07em;font-weight:850}
 h2{font-size:clamp(2.3rem,5.5vw,4.8rem);letter-spacing:-.06em;font-weight:800}
-.hero h1{font-size:clamp(1.9rem,8vw,6.6rem)}
+.hero h1{font-size:clamp(1.9rem,7vw,5.7rem)}
 .hero-title-prefix{white-space:nowrap}
 h1 em,h2 em{font-style:normal;color:var(--accent)}
 .hero-description{max-width:540px;margin:22px 0 30px;font-size:clamp(1rem,1.7vw,1.22rem);color:#f1ede5}
